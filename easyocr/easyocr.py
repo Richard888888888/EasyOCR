@@ -31,7 +31,7 @@ class Reader(object):
 
     def __init__(self, lang_list, gpu=True, model_storage_directory=None,
                  user_network_directory=None, detect_network="craft", 
-                 recog_network='standard', download_enabled=True, 
+                 recog_network='standard', download_enabled=False, 
                  detector=True, recognizer=True, verbose=True, 
                  quantize=True, cudnn_benchmark=False):
         """Create an EasyOCR Reader
@@ -51,6 +51,7 @@ class Reader(object):
 
             download_enabled (bool): Enabled downloading of model data via HTTP (default).
         """
+        MODULE_PATH = "C:/Users/zren9/Documents/GitHub/EasyOCR/easyocr"
         self.verbose = verbose
         self.download_enabled = download_enabled
 
